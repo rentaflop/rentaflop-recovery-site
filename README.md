@@ -1,4 +1,4 @@
-# [Rentaflop Landing Page](https://rentaflop.com)
+# [Rentaflop Recovery Landing Page](https://recovery.rentaflop.com)
 
 ## Setup
 

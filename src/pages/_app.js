@@ -21,10 +21,10 @@ export default function MyApp({ Component, pageProps }) {
 	{/* intentionally omitted since it's tough to get url from here
 	    <meta property="og:url" content={"https://portal.rentaflop.com/blog/"+post.slug.replace(/\.md$/, '')} /> 
 	 */}
-	<meta property="og:image" content="https://rentaflop.com/static/rentaflop_logo.png" key="og:image" />
+	<meta property="og:image" content="https://recovery.rentaflop.com/static/rentaflop_logo.png" key="og:image" />
 	<meta property="og:type" content="website" key="og:type" />
-	<meta property="og:description" content="Fast and affordable Blender 3D rendering" key="og:description" />
-	<meta property="description" content="Fast and affordable Blender 3D rendering" key="description" />
+	<meta property="og:description" content="Crypto wallet password recovery" key="og:description" />
+	<meta property="description" content="Crypto wallet password recovery" key="description" />
 	{/* NOTE: do not place script tags in next/head, they won't load */}
       </Head>
 
@@ -40,7 +40,7 @@ export default function MyApp({ Component, pageProps }) {
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('set', 'linker', {
-	    'domains': ['rentaflop.com', 'portal.rentaflop.com']
+	    'domains': ['recovery.rentaflop.com']
 	  });
 	  gtag('js', new Date());
 

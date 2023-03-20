@@ -5,7 +5,7 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import Graphic from '../../public/static/rocket_graphic.svg';
 import GraphicMobile from '../../public/static/rocket_graphic_mobile.svg';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { RentaflopText, RentaflopTable, RentaflopButton } from '../components/utils';
+import { RentaflopText, RentaflopTable, RentaflopButton, RentaflopLink } from '../components/utils';
 import theme from '../components/theme';
 import TextField from '@mui/material/TextField';
 import Page from '../components/page'
@@ -15,12 +15,9 @@ import { styled } from "@mui/material/styles";
 import BoltIcon from '@mui/icons-material/Bolt';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-import ScheduleIcon from '@mui/icons-material/Schedule';
 import SecurityIcon from '@mui/icons-material/Security';
-import SchoolIcon from '@mui/icons-material/School';
-import CloudUploadIcon from '@mui/icons-material/CloudUpload';
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+import MailIcon from '@mui/icons-material/Mail';
+import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
 import { yellow } from '@mui/material/colors';
 import { green } from '@mui/material/colors';
 import { blue } from '@mui/material/colors';
@@ -51,18 +48,16 @@ function make_graphic_styles(is_large_screen) {
   return styles;
 }
 
-const portal_url = "https://portal.rentaflop.com";
-
 const intro_cards = [
   {
     "id": 0,
     "primary":
     <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
-      Blazing fast render speed
+      Blazing fast crypto recovery speed
     </Typography>,
     "secondary":
     <Typography>
-      Meet all your deadlines with ease. Our many GPU machines across the globe render what would take days in a matter of hours.
+      Get your wallet back fast. Our many GPU machines across the globe recover your password much faster than alternative recovery services.
     </Typography>,
     "icon":
     <BoltIcon style={{ color: yellow[300], fontSize: 50 }} />
@@ -71,12 +66,11 @@ const intro_cards = [
     "id": 1,
     "primary":
     <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
-      Industry leading prices
+      Guaranteed success or it's free
     </Typography>,
     "secondary":
     <Typography>
-      Underutilized hardware around the world renders your work to save you money. Save up to 90%
-      compared to other render farms!
+      If we recover your crypto, we only take a 15% cut. We can often help, but if we can't get you your money back, it costs you nothing.
     </Typography>,
     "icon":
     <AttachMoneyIcon style={{ color: green[800], fontSize: 50 }} />
@@ -85,53 +79,15 @@ const intro_cards = [
     "id": 2,
     "primary":
     <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
-      Data security and privacy
+      Trusted password recovery
     </Typography>,
     "secondary":
     <Typography>
-      Your work is encrypted upon upload and when placed on rendering machines. Our security tiers provide added options for your privacy needs.
+      You can trust us because we're a reputable US company offering more than just password recovery.
+      Our core business is actually <RentaflopLink href="https://rentaflop.com">rendering</RentaflopLink>.
     </Typography>,
     "icon":
     <SecurityIcon style={{ color: blue[800], fontSize: 50 }} />
-  },
-  {
-    "id": 3,
-    "primary":
-    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
-      24/7 rendering with fast support
-    </Typography>,
-    "secondary":
-    <Typography>
-      Render any time you want. If you need help, you can email or live chat us and get support typically in minutes, even on weekends and holidays.
-    </Typography>,
-    "icon":
-    <ScheduleIcon style={{ color: blue[300], fontSize: 50 }} />
-  },
-  {
-    "id": 4,
-    "primary":
-    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
-      Satisfaction or your money back
-    </Typography>,
-    "secondary":
-    <Typography>
-      We take the risk and uncertainty out of rendering. We think you'll love rentaflop, but if you're not satisfied for any reason, we'll refund you.
-    </Typography>,
-    "icon":
-    <VolunteerActivismIcon style={{ color: green[300], fontSize: 50 }} />
-  },
-  {
-    "id": 5,
-    "primary":
-    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
-      Smarter rendering transparency
-    </Typography>,
-    "secondary":
-    <Typography>
-      Know everything you need to about your render. Try our free price calculator to get a render time estimate, sample frames, and an exact price quote.
-    </Typography>,
-    "icon":
-    <SchoolIcon style={{ color: orange[800], fontSize: 50 }} />
   },
 ];
       
@@ -173,10 +129,10 @@ const tutorial_cards = [
     </Typography>,
     "instruction":
     <Typography gutterBottom>
-      Register and upload your work to our cloud render farm.
+      <RentaflopLink href="/contact">Contact us</RentaflopLink>, and we'll schedule a consultation.
     </Typography>,
     "icon":
-    <CloudUploadIcon style={{ color: green[500], fontSize: 50 }} />
+    <MailIcon style={{ color: blue[300], fontSize: 50 }} />
   },
   {
     "id": 1,
@@ -186,10 +142,10 @@ const tutorial_cards = [
     </Typography>,
     "instruction":
     <Typography gutterBottom>
-      Calculate price (optional) and launch your render.
+      We evaluate your case and sign our service agreement.
     </Typography>,
     "icon":
-    <RocketLaunchIcon style={{ color: orange[500], fontSize: 50 }} />
+    <VolunteerActivismIcon style={{ color: green[300], fontSize: 50 }} />
   },
   {
     "id": 2,
@@ -199,10 +155,10 @@ const tutorial_cards = [
     </Typography>,
     "instruction":
     <Typography gutterBottom>
-      Download your result once rendering is complete.
+      We conduct the recovery and get you your crypto back!
     </Typography>,
     "icon":
-    <CloudDownloadIcon style={{ color: blue[500], fontSize: 50 }} />
+    <CurrencyBitcoinIcon style={{ color: orange[300], fontSize: 50 }} />
   },
 ];
 
@@ -277,27 +233,15 @@ export default function Home() {
 		color="textPrimary"
 		gutterBottom
               >
-		Fast and affordable 3D rendering
+		Fast and affordable crypto recovery
               </Typography>
               <Typography variant={params.secondary} align="left" color="textPrimary">
-		Don't settle for lower quality work because of high rendering costs.
+		Don't lose thousands just because you forgot a password.
               </Typography>
               <Typography variant={params.secondary} align="left" color="textPrimary">
-		Render your Maya and Blender creations with rentaflop farm and save thousands.
+		Recover your crypto wallet with rentaflop and get your money back in your hands.
               </Typography>
-	      <form onSubmit={(e) => {
-		      e.preventDefault();
-		      window.location.href=portal_url+"/register?email="+e.target.email1.value;
-		    }}>
-		<Grid container paddingTop="12px">
-		  <Grid item>
-		    <TextField variant="outlined" autoFocus={autofocus} label="Email address" name="email1" size="small" type="email" sx={{ width: { sm: 100, md: 150 } }}/>
-		  </Grid>
-		  <Grid item alignItems="stretch" style={{ display: "flex", paddingLeft: 15 }}>
-		    <RentaflopButton button_class="cta_button" submit text="Start rendering" />
-		  </Grid>
-		</Grid>
-	      </form>
+	      <RentaflopButton button_class="cta_button" dest={"/contact"} text="Start recovery" />
             </Container>
           </Box>
 	  { is_large_screen &&
@@ -317,25 +261,12 @@ export default function Home() {
 		 >
                   <CardContent sx={{ flexGrow: 1 }}>
 		    <Typography align="left" paragraph paddingTop="24px">
-		      Rentaflop helps 3D artists render animations faster and cheaper. Simply upload your project, launch your render, and download the completed
-		      result.
+		      Rentaflop recovery helps crypto owners recover their forgotten wallet passwords.
 		    </Typography>
 		    <Typography align="left" paddingTop="12px">
-		      Join now and render your Maya and Blender creations!
+		      SITE IN PROGRESS AND COMING SOON TO A GPU NEAR YOU
 		    </Typography>
-		    <form onSubmit={(e) => {
-			    e.preventDefault();
-			    window.location.href=portal_url+"/register?email="+e.target.email2.value;
-			  }}>
-		      <Grid container paddingTop="12px">
-			<Grid item>
-			  <TextField variant="outlined" label="Email address" name="email2" type="email" size="small" sx={{ width: { sm: 100, md: 150 } }}/>
-			</Grid>
-			<Grid item alignItems="stretch" style={{ display: "flex", paddingLeft: 15 }}>
-			  <RentaflopButton button_class="cta_button" submit text="Join" />
-			</Grid>
-		      </Grid>
-		    </form>
+		    <RentaflopButton button_class="cta_button" dest={"/contact"} text="Contact us" />
                   </CardContent>
 		 </Card>
                </Grid>
@@ -392,7 +323,7 @@ export default function Home() {
               spacing={2}
               justifyContent="center"
             >
-	      <RentaflopButton button_class="cta_button" text="Try it now" dest={portal_url+"/register"} />
+	      <RentaflopButton button_class="cta_button" text="Recover your crypto" dest={"/contact"} />
 	      <RentaflopButton button_class="button_style" text="Learn more" dest={"/about"} />
             </Stack>
 
@@ -405,7 +336,7 @@ export default function Home() {
               spacing={2}
               justifyContent="center"
             >
-	      <RentaflopButton button_class="cta_button" text="Render now" dest={portal_url+"/register"} />
+	      <RentaflopButton button_class="cta_button" text="Recover your crypto" dest={"/contact"} />
 	      <RentaflopButton button_class="button_style" text="Learn more" dest={"/about"} />
             </Stack>
 	  </>
@@ -464,7 +395,7 @@ export default function Home() {
             spacing={2}
             justifyContent="center"
           >
-	    <RentaflopButton button_class="cta_button" text="Render your work" dest={portal_url+"/register"} />
+	    <RentaflopButton button_class="cta_button" text="Start recovery" dest={"/contact"} />
 	    <RentaflopButton button_class="button_style" text="Learn more" dest={"/about"} />
           </Stack>
         </Container>

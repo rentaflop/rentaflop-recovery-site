@@ -8,13 +8,13 @@ export default class MyDocument extends Document {
     return (
       <Html style={{scrollBehavior:'smooth'}}>
 	<Head>
-	  <link rel="icon" href="https://rentaflop.com/static/rentaflop_logo.svg" />
-	  <link rel="apple-touch-icon" href="https://rentaflop.com/static/rentaflop_logo.png" />
+	  <link rel="icon" href="https://recovery.rentaflop.com/static/rentaflop_logo.svg" />
+	  <link rel="apple-touch-icon" href="https://recovery.rentaflop.com/static/rentaflop_logo.png" />
 	  {/*
 	     manifest.json provides metadata used when your web app is installed on a
 	     user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
 	   */}
-	  <link rel="manifest" href="https://rentaflop.com/manifest.json" />
+	  <link rel="manifest" href="https://recovery.rentaflop.com/manifest.json" />
 	  {/*
 	     Notice the use of %PUBLIC_URL% in the tags above.
 	     It will be replaced with the URL of the `public` folder during the build.
