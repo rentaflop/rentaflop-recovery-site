@@ -24,7 +24,7 @@ export function https_log(log, log_level) {
   fetch(logApiUrl, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ "message": log, "level": log_level })
+    body: JSON.stringify({ "message": "Recovery log: "+log, "level": log_level })
   });
 } 
 

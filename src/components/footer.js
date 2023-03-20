@@ -38,13 +38,13 @@ const portal_url = "https://portal.rentaflop.com"
 const footers = [
   {
     title: 'Company',
-    description: ['Home', 'About', "Blog", 'Contact'],
-    route: ['/', '/about', portal_url+'/blog', portal_url+'/contact'],
+    description: ['Home', 'About', 'Contact'],
+    route: ['/', '/about', '/contact'],
   },
   {
-    title: 'Product',
-    description: ['Pricing', 'Rentaflop miner', 'FAQ', 'Support'],
-    route: [portal_url+'/pricing', portal_url+'/blog/hosting', portal_url+'/faq', portal_url+'/support'],
+    title: 'Rendering',
+    description: ['About', 'Rentaflop miner', 'FAQ', 'Support'],
+    route: ["https://rentaflop.com", portal_url+'/blog/hosting', portal_url+'/faq', portal_url+'/support'],
   },
   {
     title: 'Legal',
@@ -86,19 +86,6 @@ export default function Footer() {
           </Grid>
 	))}
       </Grid>
-      <div style={{ marginTop: 24 }}>
-	<SocialIcon url="https://dsc.gg/rentaflop" network="discord" className={classes.social_class} />
-	<SocialIcon url="https://instagram.com/rentaflop" className={classes.social_class} />
-	<SocialIcon url="https://twitter.com/rentaflop" className={classes.social_class} />
-	<SocialIcon url="https://www.facebook.com/profile.php?id=100088816761556" className={classes.social_class} />
-	<SocialIcon url="https://www.linkedin.com/company/rentaflop" className={classes.social_class} />
-	{/* NOTE: last icon must override margin-right to 0 */}
-	<SocialIcon url="https://www.reddit.com/r/rentaflop/" className={classes.social_class} style={{ marginRight: 0 }} />
-      </div>
-      <Typography variant="body2" color="textSecondary" align="center" sx={{ mt: 1 }}>
-	{/* setting height twice because of a css conflict with app.css and index.css */}
-	Part of <Image src="./static/ycombinator.svg" height={20.18} width={63.63} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 20.18 }} alt="YCombinator logo" /> Startup School
-      </Typography>
       <Copyright sx={{ mt: 1 }} />
     </Container>
   );

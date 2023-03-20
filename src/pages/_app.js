@@ -29,8 +29,6 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
 
       <Component {...pageProps} />
-	{/* hubspot messaging */}
-	<Script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/23808232.js" strategy="afterInteractive"></Script>
 	{/*
 	   Google tag (gtag.js)
 	 */}

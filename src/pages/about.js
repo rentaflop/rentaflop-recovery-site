@@ -14,14 +14,14 @@ export default function About() {
 	Do you have a crypto wallet worth thousands, but you can't remember the password? Being locked out is frustrating.
 	Rentaflop utilizes powerful graphics cards from its 3D animation rendering business to get you your crypto back.
       </Typography>
-      <Typography align="left" paragraph paddingTop="24px">
+      <Typography align="left" paragraph>
 	We're able to recover your password faster and charge less than other recovery services because we utilize affordable hardware
 	from our core render farm business when it's otherwise idle. We take just 15% of the crypto we recover for you, and charge nothing
 	until you get your crypto back.
       </Typography>
       <Typography align="left" paragraph>
 	Email us at <RentaflopLink href="mailto:recovery@rentaflop.com">recovery@rentaflop.com</RentaflopLink>, and we'll help you
-	get your money back.
+	recover your money.
       </Typography>
     </>
   );

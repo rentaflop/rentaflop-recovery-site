@@ -49,15 +49,10 @@ class Header extends Component {
 
   render() {
     const { classes } = this.props;
-    const portal_url = "https://portal.rentaflop.com"
     let is_large_screen = true;
     // client-side-only code, so must check if window defined first
     if (typeof window !== "undefined") {
       is_large_screen = window.innerWidth > 768;
-    }
-    var button_text = {"rendering": "Rendering", "hosting": "Become a host", "pricing": "Pricing", "login": "Sign in", "register": "Start rendering"};
-    if (!is_large_screen) {
-      button_text["register"] = "Register";
     }
     
     return (
@@ -72,32 +67,13 @@ class Header extends Component {
             </a>
           </Box>
 	  <Box marginRight='10px'>
-	    <Button href={portal_url+"/rendering"} className={classes.secondary_button_style} variant="text" linkcomponent={Link}>
-	      {button_text["rendering"]}
-	    </Button>
-	  </Box>
-	  { is_large_screen &&
-	    <>
-	      <Box marginRight='10px'>
-		<Button href={portal_url+"/blog/hosting"} className={classes.secondary_button_style} variant="text" linkcomponent={Link}>
-		  {button_text["hosting"]}
-		</Button>
-	      </Box>
-	      <Box marginRight='10px'>
-		<Button href={portal_url+"/pricing"} className={classes.secondary_button_style} variant="text" linkcomponent={Link}>
-		  {button_text["pricing"]}
-		</Button>
-	      </Box>
-	    </>
-	  }
-	  <Box marginRight='10px'>
-	    <Button href={portal_url+"/login"} className={classes.button_style} variant="outlined" linkcomponent={Link}>
-	      {button_text["login"]}
+	    <Button href="/about" className={classes.button_style} variant="outlined" linkcomponent={Link}>
+	      About us
 	    </Button>
 	  </Box>
 	  <Box marginRight='10px'>
-	    <Button href={portal_url+"/register"} className={classes.cta_button} variant="outlined" linkcomponent={Link}>
-	      {button_text["register"]}
+	    <Button href="/contact" className={classes.cta_button} variant="outlined" linkcomponent={Link}>
+	      Recover your funds
 	    </Button>
 	  </Box>
         </Toolbar>

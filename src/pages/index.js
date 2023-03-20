@@ -4,6 +4,7 @@ import { Box, Typography, Card, CardMedia, CardContent, CssBaseline, Grid, Stack
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import Graphic from '../../public/static/rocket_graphic.svg';
 import GraphicMobile from '../../public/static/rocket_graphic_mobile.svg';
+// publicly available, found at https://unsplash.com/photos/3Kv48NS4WUU
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { RentaflopText, RentaflopTable, RentaflopButton, RentaflopLink } from '../components/utils';
 import theme from '../components/theme';
@@ -32,7 +33,7 @@ const CardContentNoPadding = styled(CardContent)(`
 
 function make_graphic_styles(is_large_screen) {
   const url = is_large_screen ? `url(${Graphic.src})` : `url(${GraphicMobile.src})`
-  const height = is_large_screen ? "110vh" : "90vh"
+  const height = is_large_screen ? "100vh" : "90vh"
   const styles = {
     paperContainer: {
       backgroundImage: url,
@@ -84,7 +85,7 @@ const intro_cards = [
     "secondary":
     <Typography>
       You can trust us because we're a reputable US company offering more than just password recovery.
-      Our core business is actually <RentaflopLink href="https://rentaflop.com">rendering</RentaflopLink>.
+      Our core business is actually <RentaflopLink color="#1976d2" href="https://rentaflop.com">rendering</RentaflopLink>.
     </Typography>,
     "icon":
     <SecurityIcon style={{ color: blue[800], fontSize: 50 }} />
@@ -129,7 +130,7 @@ const tutorial_cards = [
     </Typography>,
     "instruction":
     <Typography gutterBottom>
-      <RentaflopLink href="/contact">Contact us</RentaflopLink>, and we'll schedule a consultation.
+      <RentaflopLink color="#1976d2" href="/contact">Contact us</RentaflopLink>, and we'll schedule a consultation.
     </Typography>,
     "icon":
     <MailIcon style={{ color: blue[300], fontSize: 50 }} />
@@ -183,28 +184,6 @@ export default function Home() {
     autofocus = !window.location.href.includes("learn");
   }
 
-  const table_title_text = <Typography component="h1" variant="h2" align="left" fontWeight="600" gutterBottom>How rentaflop compares</Typography>
-  const table_title = <RentaflopText title={table_title_text} />
-  const table_cols = ["Company", "Price", "Fast Rendering Starting Immediately", "Supports Both Cycles and Eevee", "Satisfaction or Money Back", "Data Privacy"];
-  const rows = [
-    {"id": 0, "company": "rentaflop", "price": "$0.0019 per OBh", "fast": "Yes", "engines": "Yes", "refund": "Yes", "privacy": "Yes"},
-    {"id": 1, "company": "GarageFarm", "price": "$0.0050 per OBh, fast tier", "fast": "Yes", "engines": "No", "refund": "No", "privacy": "Yes"},
-    {"id": 2, "company": "RebusFarm", "price": "$0.0045 per OBh", "fast": "Yes", "engines": "No", "refund": "Yes", "privacy": "Yes"},
-    {"id": 3, "company": "Concierge Render", "price": "$0.0040 per OBh", "fast": "Yes", "engines": "Yes", "refund": "No", "privacy": "Yes"},
-    {"id": 4, "company": "Blendergrid", "price": "Determined prior to render", "fast": "Yes", "engines": "No", "refund": "Yes", "privacy": "Yes"},
-    {"id": 5, "company": "SheepIt", "price": "Spend points earned from providing computing power", "fast": "No", "engines": "Yes", "refund": "No", "privacy": "No"},
-  ];
-  const table_body = rows.map((row) => (
-    <TableRow key={row.id} style={(row.company === "rentaflop" ? {background: "rgb(220, 233, 241, .5)"} : {})}> 
-      <TableCell>{row.company}</TableCell>
-      <TableCell>{row.price}</TableCell>
-      <TableCell>{row.fast}</TableCell>
-      <TableCell>{row.engines}</TableCell>
-      <TableCell>{row.refund}</TableCell>
-      <TableCell>{row.privacy}</TableCell>
-    </TableRow>
-  ));
-  const table_footer = <Typography component="p" variant="p" align="right" color="rgb(128, 128, 128, .5)" sx={{pt: 2}}>Data from 10/05/22</Typography>
   const tutorial_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>How it works</Typography>
   const business_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>Trusted for business by</Typography>
   const social_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>What our customers say</Typography>
@@ -239,14 +218,13 @@ export default function Home() {
 		Don't lose thousands just because you forgot a password.
               </Typography>
               <Typography variant={params.secondary} align="left" color="textPrimary">
-		Recover your crypto wallet with rentaflop and get your money back in your hands.
+		Recover your crypto wallet with rentaflop and get your money back into your hands.
               </Typography>
-	      <RentaflopButton button_class="cta_button" dest={"/contact"} text="Start recovery" />
             </Container>
           </Box>
 	  { is_large_screen &&
 	  <Link href="/#learn" scroll={false}>
-	    <ArrowDownwardIcon style={{ color: textColorDark, fontSize: 225, marginTop: "-35px" }} />
+	    <ArrowDownwardIcon style={{ color: textColorDark, fontSize: 225, marginTop: "-25px" }} />
 	  </Link>
 	  }
 	</Paper>
@@ -263,8 +241,8 @@ export default function Home() {
 		    <Typography align="left" paragraph paddingTop="24px">
 		      Rentaflop recovery helps crypto owners recover their forgotten wallet passwords.
 		    </Typography>
-		    <Typography align="left" paddingTop="12px">
-		      SITE IN PROGRESS AND COMING SOON TO A GPU NEAR YOU
+		    <Typography align="left" paddingTop="12px" paragraph>
+		      The road to wallet recovery doesn't have to be a long one. Let's explore your options today.
 		    </Typography>
 		    <RentaflopButton button_class="cta_button" dest={"/contact"} text="Contact us" />
                   </CardContent>
@@ -276,7 +254,7 @@ export default function Home() {
 		 >
 		   <CardMedia>
 		     <div style={{ position: 'relative', width: 563, height: 324 }}>
-		       <Image alt="Blender application home screen" src="./static/blender_application.png" fill
+		       <Image alt="Road to wallet recovery" src="./static/road_to_recovery.jpg" fill
 			      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
 		     </div>
 		   </CardMedia>
@@ -285,19 +263,27 @@ export default function Home() {
              </Grid>
 	</Container>
 		
-	{/* supported software */}
+    {/* supported crypto */}
         <Stack
           sx={{ pt: 3, pb: 3 }}
           direction="row"
           spacing={2}
           justifyContent="center"
         >
+	  {/* logos found at https://cryptologos.cc/dogecoin */}
 	  {/* setting height twice because of a css conflict with app.css and index.css */}
-	  <Image src="./static/maya_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
-									    }} alt="Maya logo" />
-	  <Image src="./static/blender_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
-									    }} alt="Blender logo" />
-        </Stack>
+	  <Image src="./static/btc_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
+									    }} alt="Bitcoin logo" />
+	  <Image src="./static/eth_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
+									    }} alt="Ethereum logo" />
+	  <Image src="./static/ltc_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
+									    }} alt="Litecoin logo" />
+	  <Image src="./static/doge_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
+									    }} alt="Dogecoin logo" />
+	</Stack>
+	<Typography>
+	  and more!
+	</Typography>
 
 	{/* primary benefits */}
         <Container sx={{ pt: 4 }} maxWidth="md">
@@ -327,21 +313,6 @@ export default function Home() {
 	      <RentaflopButton button_class="button_style" text="Learn more" dest={"/about"} />
             </Stack>
 
-	{/* how rentaflop compares to alternatives table */}
-	{ is_large_screen &&
-	  <>
-	    <RentaflopTable title={table_title} cols={table_cols} body={table_body} footer={table_footer} />
-            <Stack
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-	      <RentaflopButton button_class="cta_button" text="Recover your crypto" dest={"/contact"} />
-	      <RentaflopButton button_class="button_style" text="Learn more" dest={"/about"} />
-            </Stack>
-	  </>
-	}
-
 	{/* how it works */}
         <Container maxWidth="md">
  	  <RentaflopText title={tutorial_title} padding={"64px"} />
@@ -361,8 +332,17 @@ export default function Home() {
 	       ))}
 	     </Grid>
         </Container>
+    <Stack
+      sx={{ pt: 4 }}
+      direction="row"
+      spacing={2}
+      justifyContent="center"
+    >
+      <RentaflopButton button_class="cta_button" text="Get your money back now" dest={"/contact"} />
+    </Stack>
 
-	{/* social proof */}
+    {/* social proof */}
+    {/*
         <Container maxWidth="md">
 	  <RentaflopText title={business_title} padding={"64px"} />
              <Grid container spacing={4} id="business">
@@ -399,6 +379,7 @@ export default function Home() {
 	    <RentaflopButton button_class="button_style" text="Learn more" dest={"/about"} />
           </Stack>
         </Container>
+     */}
       </main>
     </Page>
   );
