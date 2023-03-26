@@ -20,7 +20,7 @@ export default function About() {
 	until you get your crypto back.
       </Typography>
       <Typography align="left" paragraph>
-	Email us at <RentaflopLink href="mailto:recovery@rentaflop.com">recovery@rentaflop.com</RentaflopLink>, and we'll help you
+	<RentaflopLink href="/contact">Contact us</RentaflopLink>, and we'll help you
 	recover your money.
       </Typography>
     </>
